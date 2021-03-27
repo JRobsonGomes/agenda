@@ -6,15 +6,14 @@
 <meta charset="utf-8">
 <title>Agenda de contatos</title>
 <link rel="icon" href="imagens/favicon.png">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet"
-	href="webjars/bootstrap/${bootstrap.version}/css/bootstrap.css">
+<link rel="stylesheet"	href="webjars/bootstrap/${bootstrap.version}/css/bootstrap.css">
+<link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
 	<div class="container">
 		<img alt="agenda" src="imagens/agenda.png">
-		<h1>Agenda de contatos</h1>
-		<a href="" class="btn btn-primary">Acessar</a>
+		<h1 class="home-titulo">Agenda de contatos</h1>
+		<a href="Home" class="btn btn-primary btn-lg btn-custom">Acessar</a>
 	</div>
 
 	<script src="webjars/jquery/${jquery.version}/jquery.js"></script>

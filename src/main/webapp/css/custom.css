@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap')
+	;
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.home-titulo {
+	color: #b48237;
+	margin-bottom: 20px
+	
+}
+.btn-custom{
+	background-color: #b48237;
+	border-color: #b48237;
+	width: 250px;
+}
+
+.btn-custom:hover {
+    background-color: #e5b46c;
+    border-color: #d9993b;
+}
+
+.btn-custom:not(:disabled):not(.disabled):active, .btn-custom:not(:disabled):not(.disabled).active, .show > .btn-custom.dropdown-toggle {
+    color: #fff;
+    background-color: #b48237;
+    border-color: #b48237;
+}
