@@ -7,9 +7,9 @@
   </welcome-file-list>
   <servlet>
     <description></description>
-    <display-name>Hello</display-name>
-    <servlet-name>Hello</servlet-name>
-    <servlet-class>hello.Hello</servlet-class>
+    <display-name>HomeController</display-name>
+    <servlet-name>HomeController</servlet-name>
+    <servlet-class>controllers.HomeController</servlet-class>
     
     <!-- REFERENCIA CONFIG WEBJARS: https://damienfremont.com/2015/10/08/webjars-use-dynamic-urls-for-your-dependencies-vs-versionning-hell/ -->
     <servlet-name>WebjarsServlet</servlet-name>
@@ -21,8 +21,8 @@
     <load-on-startup>2</load-on-startup>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Hello</servlet-name>
-    <url-pattern>/Hello</url-pattern>
+    <servlet-name>HomeController</servlet-name>
+    <!-- <url-pattern>/HomeController</url-pattern> -->
     
      <!-- REFERENCIA CONFIG WEBJARS: https://damienfremont.com/2015/10/08/webjars-use-dynamic-urls-for-your-dependencies-vs-versionning-hell/ -->
     <servlet-name>WebjarsServlet</servlet-name>
