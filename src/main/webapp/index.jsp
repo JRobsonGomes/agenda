@@ -13,7 +13,7 @@
 	<div class="container">
 		<img alt="agenda" src="imagens/agenda.png">
 		<h1 class="home-titulo">Agenda de contatos</h1>
-		<a href="Home" class="btn btn-primary btn-lg btn-custom">Acessar</a>
+		<a href="Home" class="btn btn-lg btn-custom">Acessar</a>
 	</div>
 
 	<script src="webjars/jquery/${jquery.version}/jquery.js"></script>

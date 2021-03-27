@@ -15,19 +15,31 @@ body {
 	margin-bottom: 20px
 	
 }
+
+/* -----------------------Botao home-------------------- */
 .btn-custom{
+	color: #e8e8e8;
 	background-color: #b48237;
 	border-color: #b48237;
 	width: 250px;
 }
 
 .btn-custom:hover {
+	color: #fff;
     background-color: #e5b46c;
     border-color: #d9993b;
 }
 
 .btn-custom:not(:disabled):not(.disabled):active, .btn-custom:not(:disabled):not(.disabled).active, .show > .btn-custom.dropdown-toggle {
-    color: #fff;
+	color: #e8e8e8;
     background-color: #b48237;
     border-color: #b48237;
 }
+
+.btn-custom:focus, .btn-custom.focus {
+	color: #fff;
+    background-color: #b48237;
+    border-color: #b48237;
+    box-shadow: 0 0 0 0.2rem rgb(247 186 78 / 50%);
+}
+
