@@ -1,33 +1,37 @@
-package controllers;
+package com.robson.agenda.controllers;
 
 import java.io.IOException;
+
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class HomeController
- */
+import com.robson.agenda.entidades.Contato;
+import com.robson.agenda.services.ContatoService;
+
+@Named
+@RequestScoped
 @WebServlet(urlPatterns = { "/HomeController", "/Home" })
 public class HomeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+
+	@Inject
+	private ContatoService service;
+	
     public HomeController() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		Contato contato = new Contato(null, "Alex", "(11) 2989-2548", "alex@gmail.com");
+		service.salvar(contato);
+		response.getWriter().append("Contato: " + contato);
 	}
 
 }

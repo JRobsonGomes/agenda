@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.robson</groupId>
 	<artifactId>agenda</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>war</packaging>
 	<description>Agenda de contatos</description>
 	<name>Agenda</name>
@@ -14,27 +14,8 @@
 		<maven.compiler.target>11</maven.compiler.target>
 		<maven.compiler.source>11</maven.compiler.source>
 
-		<bootstrap.version>4.6.0-1</bootstrap.version>
-		<jquery.version>3.6.0</jquery.version>
 	</properties>
 	<dependencies>
-		<!-- REFERENCIA CONFIG WEBJARS: https://damienfremont.com/2015/10/08/webjars-use-dynamic-urls-for-your-dependencies-vs-versionning-hell/ -->
-		<!-- WEB DEPENDENCIES -->
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>webjars-servlet-2.x</artifactId>
-			<version>1.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>bootstrap</artifactId>
-			<version>${bootstrap.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>jquery</artifactId>
-			<version>${jquery.version}</version>
-		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -43,37 +24,4 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-	<!-- RESOURCES FILTERING ONLY ON JSP FILES TO AVOID HTML TEMPLATES MODIFICATION -->
-	<build>
-		<resources>
-			<!-- FILTERING FOR WTP PLUGIN -->
-			<resource>
-				<directory>src/main/webapp</directory>
-				<filtering>true</filtering>
-				<targetPath>${project.basedir}/target/m2e-wtp/web-resources</targetPath>
-				<includes>
-					<include>*.jsp</include>
-				</includes>
-			</resource>
-		</resources>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>3.3.1</version>
-				<configuration>
-					<webResources>
-						<!-- FILTERING FOR PACKAGING -->
-						<resource>
-							<directory>src/main/webapp</directory>
-							<filtering>true</filtering>
-							<includes>
-								<include>*.jsp</include>
-							</includes>
-						</resource>
-					</webResources>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
 </project>

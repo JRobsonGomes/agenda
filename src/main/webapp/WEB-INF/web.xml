@@ -2,30 +2,18 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
   <display-name>agenda</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
     <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
   </welcome-file-list>
   <servlet>
     <description></description>
     <display-name>HomeController</display-name>
     <servlet-name>HomeController</servlet-name>
-    <servlet-class>controllers.HomeController</servlet-class>
+    <servlet-class>com.robson.agenda.controllers.HomeController</servlet-class>
     
-    <!-- REFERENCIA CONFIG WEBJARS: https://damienfremont.com/2015/10/08/webjars-use-dynamic-urls-for-your-dependencies-vs-versionning-hell/ -->
-    <servlet-name>WebjarsServlet</servlet-name>
-    <servlet-class>org.webjars.servlet.WebjarsServlet</servlet-class>
-    <init-param>
-        <param-name>disableCache</param-name>
-        <param-value>true</param-value>
-    </init-param>
-    <load-on-startup>2</load-on-startup>
   </servlet>
   <servlet-mapping>
     <servlet-name>HomeController</servlet-name>
-    <!-- <url-pattern>/HomeController</url-pattern> -->
-    
-     <!-- REFERENCIA CONFIG WEBJARS: https://damienfremont.com/2015/10/08/webjars-use-dynamic-urls-for-your-dependencies-vs-versionning-hell/ -->
-    <servlet-name>WebjarsServlet</servlet-name>
-    <url-pattern>/webjars/*</url-pattern>
+    <url-pattern>/HomeController</url-pattern>
   </servlet-mapping>
 </web-app>
