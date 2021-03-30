@@ -2,7 +2,6 @@ package com.robson.agenda.services;
 
 import java.util.List;
 
-import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 
@@ -10,7 +9,6 @@ import com.robson.agenda.dao.ContatoDao;
 import com.robson.agenda.entidades.Contato;
 
 
-@Stateless
 public class ContatoServiceImpl implements ContatoService {
 
 	@Inject

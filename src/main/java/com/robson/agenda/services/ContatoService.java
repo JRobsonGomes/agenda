@@ -2,8 +2,11 @@ package com.robson.agenda.services;
 
 import java.util.List;
 
+import javax.ejb.Stateless;
+
 import com.robson.agenda.entidades.Contato;
 
+@Stateless
 public interface ContatoService {
 
 void salvar(Contato contato);

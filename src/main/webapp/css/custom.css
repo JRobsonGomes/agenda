@@ -4,6 +4,11 @@
 	url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap')
 	;
 
+:root {
+	--blue: #5dc4dc;
+	--primary: #5dc4dc;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1rem;
@@ -12,12 +17,16 @@ body {
 
 .home-titulo {
 	color: #b48237;
-	margin-bottom: 20px
-	
+}
+
+.agenda-titulo {
+	color: var(--primary);
+	margin-top: 40px;
+	margin-bottom: 20px;
 }
 
 /* -----------------------Botao home-------------------- */
-.btn-custom{
+.btn-custom {
 	color: #e8e8e8;
 	background-color: #b48237;
 	border-color: #b48237;
@@ -26,20 +35,47 @@ body {
 
 .btn-custom:hover {
 	color: #fff;
-    background-color: #e5b46c;
-    border-color: #d9993b;
+	background-color: #e5b46c;
+	border-color: #d9993b;
 }
 
-.btn-custom:not(:disabled):not(.disabled):active, .btn-custom:not(:disabled):not(.disabled).active, .show > .btn-custom.dropdown-toggle {
+.btn-custom:not(:disabled):not(.disabled):active, .btn-custom:not(:disabled):not(.disabled).active,
+	.show>.btn-custom.dropdown-toggle {
 	color: #e8e8e8;
-    background-color: #b48237;
-    border-color: #b48237;
+	background-color: #b48237;
+	border-color: #b48237;
 }
 
 .btn-custom:focus, .btn-custom.focus {
 	color: #fff;
-    background-color: #b48237;
-    border-color: #b48237;
-    box-shadow: 0 0 0 0.2rem rgb(247 186 78 / 50%);
+	background-color: #b48237;
+	border-color: #b48237;
+	box-shadow: 0 0 0 0.2rem rgb(247 186 78/ 50%);
 }
 
+/* -----------------------Botao primary custom-------------------- */
+.btn-primary {
+	color: #fff;
+	background-color: var(--primary);
+	border-color: var(--primary);
+	width: 250px;
+}
+
+.btn-primary:hover {
+	color: #fff;
+	background-color: #88ccdc;
+	border-color: #0ba4c8;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+	.show>.btn-primary.dropdown-toggle {
+	background-color: var(--primary);
+	border-color: var(--primary);
+}
+
+.btn-primary:focus, .btn-primary.focus {
+	color: #fff;
+	background-color: var(--primary);
+	border-color: var(--primary);
+	box-shadow: 0 0 0 0.2rem rgb(247 186 78/ 50%);
+}

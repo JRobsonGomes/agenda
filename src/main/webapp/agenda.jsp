@@ -11,9 +11,8 @@
 </head>
 <body>
 	<div class="container">
-		<img alt="agenda" src="imagens/agenda.png">
-		<h1 class="home-titulo mb-5">Agenda de contatos</h1>
-		<a href="Home" class="btn btn-lg btn-custom">Acessar</a>
+		<h1 class="home-titulo mt-5">Agenda de contatos</h1>
+		<a href="" class="btn btn-lg btn-custom mt-3">Novo contato</a>
 	</div>
 </body>
 </html>
