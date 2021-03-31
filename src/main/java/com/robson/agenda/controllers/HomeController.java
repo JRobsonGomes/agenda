@@ -25,6 +25,8 @@ public class HomeController extends HttpServlet {
 		String action = request.getServletPath();
 		if (action.equals("/Home")) {
 			contatos(request, response);
+		}else {
+			response.sendRedirect("index.html");
 		}
 	}
 

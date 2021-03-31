@@ -15,14 +15,12 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @RequiredArgsConstructor
-@ToString
 @EqualsAndHashCode(of={"id"})
 @Entity
 @Table(name = "tb_contatos")
@@ -34,5 +32,10 @@ public class Contato implements Serializable {
 	private Long id;
 	@NonNull private String nome;
 	private String telefone;
-	private String email;	
+	private String email;
+	
+	@Override
+	public String toString() {
+		return "Nome: " + nome + "\nTelefone: " + telefone + "\nEmail: " + email;
+	}
 }
