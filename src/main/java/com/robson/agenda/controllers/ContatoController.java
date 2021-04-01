@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.robson.agenda.entidades.Contato;
 import com.robson.agenda.services.ContatoService;
 
-@WebServlet(urlPatterns = { "/ContatoController", "/Editar", "/Atualizar" })
+@WebServlet(urlPatterns = { "/ContatoController", "/Editar", "/Atualizar", "/deletar" })
 public class ContatoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -25,9 +25,21 @@ public class ContatoController extends HttpServlet {
 		super();
 	}
 	
+	private void deletarContato(HttpServletRequest request, HttpServletResponse response) {
+		try {
+			contato = new Contato();
+			
+			contato = getContato(request, contato);
+			service.excluir(contato.getId());
+			response.sendRedirect("Home");
+		} catch (Exception e) {
+			System.out.println("Erro ao excluir contato: " + e.getMessage());
+		}
+	}
+	
 	private void editarContato(HttpServletRequest request, HttpServletResponse response) {
 		try {
-			Contato contato = new Contato();
+			contato = new Contato();
 			
 			contato = getContato(request, contato);
 			request.setAttribute("contato", contato);
@@ -62,7 +74,13 @@ public class ContatoController extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		editarContato(request, response);
+		String action = request.getServletPath();
+		if (action.equals("/Editar")) {
+			
+			editarContato(request, response);
+		} else if(action.equals("/deletar")) {
+			deletarContato(request, response);
+		}
 	}
 	private void setContato(HttpServletRequest request) {
 	

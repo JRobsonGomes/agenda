@@ -28,7 +28,7 @@
 				if (!contatos.isEmpty() || contatos.size() <= -1) {
 				%>
 				<div class="mt-5">
-					<table class="table table-striped table-hover table-bordered">
+					<table class="table table-striped table-hover table-bordered table-sm">
 						<thead>
 							<tr>
 								<th scope="col">Nome</th>
@@ -45,7 +45,10 @@
 								<td><%=contato.getNome()%></td>
 								<td><%=contato.getTelefone()%></td>
 								<td><%=contato.getEmail()%></td>
-								<td><a href="Editar?id=<%=contato.getId() %>" class="btn btn-primary">Editar</a></td>
+								<td>
+									<a href="Editar?id=<%=contato.getId() %>" class="btn btn-primary btn-sm ml-3">Editar</a>
+									<a href="javascript: confirmar(<%=contato.getId() %>, '<%=contato.getNome()%>')" class="btn btn-danger btn-sm ml-3">Excluir</a>
+								</td>
 							</tr>
 							<%
 							}
@@ -59,5 +62,6 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="scripts/confirmacao.js"></script>
 </body>
 </html>

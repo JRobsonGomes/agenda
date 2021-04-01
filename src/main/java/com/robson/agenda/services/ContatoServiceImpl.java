@@ -26,6 +26,7 @@ public class ContatoServiceImpl implements ContatoService {
 		dao.update(contato);
 	}
 
+	@Transactional
 	@Override
 	public void excluir(Long id) {
 		dao.delete(id);
