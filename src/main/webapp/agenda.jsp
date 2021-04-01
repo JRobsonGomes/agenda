@@ -3,7 +3,7 @@
 <%@ page import="java.util.List"%>
 <%@ page import="com.robson.agenda.entidades.Contato"%>
 <%
-List<Contato> contatos = (List<Contato>) request.getAttribute("contatos");
+	List<Contato> contatos = (List<Contato>) request.getAttribute("contatos");
 %>
 <!DOCTYPE html>
 <html>
@@ -34,6 +34,7 @@ List<Contato> contatos = (List<Contato>) request.getAttribute("contatos");
 								<th scope="col">Nome</th>
 								<th scope="col">Telefone</th>
 								<th scope="col">Email</th>
+								<th scope="col">Ações</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -44,6 +45,7 @@ List<Contato> contatos = (List<Contato>) request.getAttribute("contatos");
 								<td><%=contato.getNome()%></td>
 								<td><%=contato.getTelefone()%></td>
 								<td><%=contato.getEmail()%></td>
+								<td><a href="Editar?id=<%=contato.getId() %>" class="btn btn-primary">Editar</a></td>
 							</tr>
 							<%
 							}

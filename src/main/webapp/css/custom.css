@@ -58,7 +58,6 @@ body {
 	color: #fff;
 	background-color: var(--primary);
 	border-color: var(--primary);
-	width: 250px;
 }
 
 .btn-primary:hover {
@@ -87,4 +86,8 @@ body {
 
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: #e5b46c2e;
+}
+
+.table th {
+    background-color: var(--primary);
 }
