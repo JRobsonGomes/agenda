@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="PT-BR">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <title>Novo Contato</title>
 <link rel="icon" href="imagens/favicon.png">
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -10,26 +10,29 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<h1 class="home-titulo mt-5 col-md-6 offset-md-3">Criar novo Contato</h1>
-			<form class="col-md-6 offset-md-3" name="formContato" action="ContatoController" method="post" onsubmit="return validar()">
-				<div class="form-group mt-5">
-					<div class="mb-4">
-						<input type="text" class="form-control" name="nome"
-							placeholder="Nome">
-						<div class="invalid-feedback" id="feedbackNome">Preencha o nome</div>
+			<div class="col-md-6 offset-md-3">
+				<h1 class="home-titulo mt-5">Criar novo Contato</h1>
+				<form class="mt-5" name="formContato" action="ContatoController"
+					method="post" onsubmit="return validar()">
+					<div class="form-group">
+						<div class="mb-4">
+							<input type="text" class="form-control" name="nome"
+								placeholder="Nome">
+							<div class="invalid-feedback" id="feedbackNome">Preencha o nome</div>
+						</div>
+						<div class="mb-4">
+							<input type="text" class="form-control" name="telefone"
+								placeholder="Telefone">
+							<div class="invalid-feedback" id="feedbackTelefone">Preencha o telefone</div>
+						</div>
+						<div class="mb-5">
+							<input type="email" class="form-control" name="email"
+								placeholder="Email">
+						</div>
 					</div>
-					<div class="mb-4">
-						<input type="text" class="form-control" name="telefone"
-							placeholder="Telefone">
-						<div class="invalid-feedback" id="feedbackTelefone">Preencha o telefone</div>
-					</div>
-					<div class="mb-5">
-						<input type="email" class="form-control" name="email"
-							placeholder="Email">
-					</div>
-				</div>
-				<button type="submit" class="btn btn-custom">Enviar</button>
-			</form>
+					<button type="submit" class="btn btn-custom">Enviar</button>
+				</form>
+			</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="scripts/validador.js"></script>

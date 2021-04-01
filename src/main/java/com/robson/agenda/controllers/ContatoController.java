@@ -17,25 +17,30 @@ public class ContatoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
 	@Inject
-	ContatoService service;
-	
+	ContatoService service;	
 	
     public ContatoController() {
         super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String nome = request.getParameter("nome");
-		String telefone = request.getParameter("telefone");
-		String email = request.getParameter("email");
-		
-		Contato contato = new Contato();
-		contato.setNome(nome);
-		contato.setTelefone(telefone);
-		contato.setEmail(email);
-		
-		service.salvar(contato);
-		response.sendRedirect("/Home");
+		try {
+			
+			request.setCharacterEncoding("UTF-8");
+			String nome = request.getParameter("nome");
+			String telefone = request.getParameter("telefone");
+			String email = request.getParameter("email");
+			
+			Contato contato = new Contato();
+			contato.setNome(nome);
+			contato.setTelefone(telefone);
+			contato.setEmail(email);
+			
+			service.salvar(contato);
+			response.sendRedirect("HomeController");
+		} catch (Exception e) {
+			System.out.println("Erro ao salvar contato: " + e.getMessage());
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
