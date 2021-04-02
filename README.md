@@ -8,28 +8,28 @@ Agenda de contatos - Java EE Web
 Servlets, CDI, JPA, Servidor Jboss, Java Server Pages (JSP), HTML, CSS, Bootstrap, JQuery, JavaScript, PostgreSQL.
 
 #### Home
-![Home](https://github.com/JRobsonGomes/agenda/blob/main/src/main/resources/imagens/telas/1%20-%20Home.jpg)
+![Home](https://github.com/JRobsonGomes/agenda/blob/main/src/main/resources/imagens/telas/1-Home.jpg)
 
 ### Listagem
-![Listagem](https://github.com/JRobsonGomes/agenda/blob/main/src/main/resources/imagens/telas/2%20-%20Agenda%20-%20Listagem.jpg)
+![Listagem](https://github.com/JRobsonGomes/agenda/blob/main/src/main/resources/imagens/telas/2-Agenda-Listagem.jpg)
 
 ### Novo Contato
-![Novo Contato](https://github.com/JRobsonGomes/agenda/blob/main/src/main/resources/imagens/telas/3%20-%20Novo%20Contato.jpg)
+![Novo Contato](https://github.com/JRobsonGomes/agenda/blob/main/src/main/resources/imagens/telas/3-Novo-Contato.jpg)
 
-### Validação nome
-![Validação nome](https://github.com/JRobsonGomes/agenda/blob/main/src/main/resources/imagens/telas/4%20-%20Valida%C3%A7%C3%A3o%20nome%20vazio.jpg)
+### Validação nome vazio
+![Validação nome](https://github.com/JRobsonGomes/agenda/blob/main/src/main/resources/imagens/telas/4-Validacao-Nome_Vazio.jpg)
 
-### Validação nome
-![Validação nome](https://github.com/JRobsonGomes/agenda/blob/main/src/main/resources/imagens/telas/5%20-%20Valida%C3%A7%C3%A3o%20nome%20menor.jpg)
+### Validação nome menor
+![Validação nome](https://github.com/JRobsonGomes/agenda/blob/main/src/main/resources/imagens/telas/5-Validacao-Nome_Menor.jpg)
 
 ### Validação telefone
-![Validação telefone](https://github.com/JRobsonGomes/agenda/blob/main/src/main/resources/imagens/telas/6%20-%20Valida%C3%A7%C3%A3o%20telefone.jpg)
+![Validação telefone](https://github.com/JRobsonGomes/agenda/blob/main/src/main/resources/imagens/telas/6-Validacao-Telefone.jpg)
 
 ### Editar Contato
-![Editar Contato](https://github.com/JRobsonGomes/agenda/blob/main/src/main/resources/imagens/telas/7%20-%20Editar%20Contato.jpg)
+![Editar Contato](https://github.com/JRobsonGomes/agenda/blob/main/src/main/resources/imagens/telas/7-Editar-Contato.jpg)
 
-### Validação telefone
-![Validação telefone](https://github.com/JRobsonGomes/agenda/blob/main/src/main/resources/imagens/telas/8%20-%20Valida%C3%A7%C3%A3o%20-%20Telefone%20-%20formata%C3%A7%C3%A3o.jpg)
+### Validação telefone formatado
+![Validação telefone](https://github.com/JRobsonGomes/agenda/blob/main/src/main/resources/imagens/telas/8-Validacao-Telefone_Formatacao.jpg)
 
 ### Excluir Contato
-![Excluir Contato](https://github.com/JRobsonGomes/agenda/blob/main/src/main/resources/imagens/telas/9%20-%20Excluir%20Contato.jpg)
+![Excluir Contato](https://github.com/JRobsonGomes/agenda/blob/main/src/main/resources/imagens/telas/9-Excluir-Contato.jpg)
