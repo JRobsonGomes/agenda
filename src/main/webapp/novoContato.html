@@ -21,20 +21,25 @@
 							<div class="invalid-feedback" id="feedbackNome">Preencha o nome</div>
 						</div>
 						<div class="mb-4">
-							<input type="text" class="form-control" name="telefone"
-								placeholder="Telefone">
+							<input type="text" class="form-control" name="telefone" id="txttelefone"
+								placeholder="Telefone" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4}">
 							<div class="invalid-feedback" id="feedbackTelefone">Preencha o telefone</div>
 						</div>
-						<div class="mb-5">
+						<div class="mb-4">
 							<input type="email" class="form-control" name="email"
 								placeholder="Email">
 						</div>
 					</div>
-					<button type="submit" class="btn btn-custom">Salvar</button>
+					<div class="row px-3">
+						<button type="submit" class="btn btn-custom col mr-2">Salvar</button>
+						<a href="home" class="btn btn-primary col ml-2">Cancelar</a>
+					</div>
 				</form>
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="scripts/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.mask.min.js"></script>
 	<script type="text/javascript" src="scripts/validador.js"></script>
 </body>
 </html>

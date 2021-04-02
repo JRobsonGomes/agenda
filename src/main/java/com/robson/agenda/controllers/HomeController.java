@@ -17,7 +17,7 @@ import com.robson.agenda.services.ContatoService;
 
 @Named
 @RequestScoped
-@WebServlet(urlPatterns = { "/HomeController", "/Home" })
+@WebServlet(urlPatterns = { "/HomeController", "/home" })
 public class HomeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -31,7 +31,7 @@ public class HomeController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String action = request.getServletPath();
-		if (action.equals("/Home") || action.equals("/HomeController")) {
+		if (action.equals("/home") || action.equals("/HomeController")) {
 			contatos(request, response);
 		}else {
 			response.sendRedirect("index.html");

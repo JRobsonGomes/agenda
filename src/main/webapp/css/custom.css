@@ -9,6 +9,10 @@
 	--primary: #5dc4dc;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1rem;

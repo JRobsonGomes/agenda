@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.robson.agenda.entidades.Contato;
 import com.robson.agenda.services.ContatoService;
 
-@WebServlet(urlPatterns = { "/ContatoController", "/Editar", "/Atualizar", "/deletar" })
+@WebServlet(urlPatterns = { "/ContatoController", "/editar", "/atualizar", "/deletar" })
 public class ContatoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -31,7 +31,7 @@ public class ContatoController extends HttpServlet {
 			
 			contato = getContato(request, contato);
 			service.excluir(contato.getId());
-			response.sendRedirect("Home");
+			response.sendRedirect("home");
 		} catch (Exception e) {
 			System.out.println("Erro ao excluir contato: " + e.getMessage());
 		}
@@ -58,12 +58,12 @@ public class ContatoController extends HttpServlet {
 			if (action.equals("/ContatoController")) {
 				setContato(request);
 				service.salvar(contato);
-			} else if (action.equals("/Atualizar")) {
+			} else if (action.equals("/atualizar")) {
 				contato = getContato(request, contato);
 				setContato(request);
 				service.editar(contato);
 			}
-			response.sendRedirect("Home");
+			response.sendRedirect("home");
 		} catch (Exception e) {
 			System.out.println("Erro ao salvar contato: " + e.getMessage());
 		}
@@ -75,16 +75,17 @@ public class ContatoController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getServletPath();
-		if (action.equals("/Editar")) {
+		if (action.equals("/editar")) {
 			
 			editarContato(request, response);
 		} else if(action.equals("/deletar")) {
 			deletarContato(request, response);
 		}
 	}
-	private void setContato(HttpServletRequest request) {
 	
+	private void setContato(HttpServletRequest request) {
 		try {
+			
 			request.setCharacterEncoding("UTF-8");
 			//Buscar paremtros do formulário
 			String nome = request.getParameter("nome");
@@ -101,6 +102,7 @@ public class ContatoController extends HttpServlet {
 	
 	private Contato getContato(HttpServletRequest request, Contato contato) {
 		try {
+			
 			Long id = Long.parseLong(request.getParameter("id"));
 			contato = service.buscarPorId(id);
 			

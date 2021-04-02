@@ -18,7 +18,7 @@ Contato contato = (Contato) request.getAttribute("contato");
 		<div class="row">
 			<div class="col-md-6 offset-md-3">
 				<h1 class="home-titulo mt-5">Editar Contato</h1>
-				<form class="mt-5" name="formContato" action="Atualizar" method="post"
+				<form class="mt-5" name="formContato" action="atualizar" method="post"
 					onsubmit="return validar()">
 					<div class="form-group">
 						<div hidden="hidden" class="mb-4">
@@ -30,20 +30,25 @@ Contato contato = (Contato) request.getAttribute("contato");
 							<div class="invalid-feedback" id="feedbackNome">Preencha o nome</div>
 						</div>
 						<div class="mb-4">
-							<input type="text" class="form-control" name="telefone"
-								placeholder="Telefone" value="<%=contato.getTelefone()%>">
+							<input type="text" class="form-control" name="telefone" id="txttelefone"
+								placeholder="Telefone" value="<%=contato.getTelefone()%>" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4}">
 							<div class="invalid-feedback" id="feedbackTelefone">Preencha o telefone</div>
 						</div>
-						<div class="mb-5">
+						<div class="mb-4">
 							<input type="email" class="form-control" name="email"
 								placeholder="Email" value="<%=contato.getEmail()%>">
 						</div>
 					</div>
-					<button type="submit" class="btn btn-custom">Salvar</button>
+					<div class="row px-3">
+						<button type="submit" class="btn btn-custom col mr-2">Salvar</button>
+						<a href="home" class="btn btn-primary col ml-2">Cancelar</a>
+					</div>
 				</form>
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="scripts/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.mask.min.js"></script>
 	<script type="text/javascript" src="scripts/validador.js"></script>
 </body>
 </html>

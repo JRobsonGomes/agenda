@@ -28,14 +28,16 @@ function validar() {
 		formContato.telefone.classList.add('is-invalid');
 		formContato.telefone.focus();
 		return false;
-	}else if (telefone.length < 9) {
-		formContato.telefone.classList.add('is-invalid');
-		feedbackTelefone.innerText = 'Não pode ser menor que 9 caracteres!'
-		formContato.telefone.focus();
-		return false;
 	}else {
 		formContato.telefone.classList.remove('is-invalid');
 		formContato.telefone.classList.add('is-valid');
-		feedbackTelefone.innerText = 'Preencha o telefone';
 	}
 }
+
+/*
+ *Função para formatar telefone
+ *Importar jquery e jquery.mask.min nas paginas que usarão a formatação
+*/
+
+$("#txttelefone").mask("(00) 0000-0000");
+

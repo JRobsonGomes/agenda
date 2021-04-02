@@ -19,7 +19,9 @@
 		<div class="row">
 			<div class="col">
 				<div class="mt-5">
-					<h1 class="home-titulo">Agenda de contatos</h1>
+					<a href="index.html">
+						<h1 class="home-titulo">Agenda de contatos</h1>
+					</a>
 				</div>
 				<div class="mt-3">
 					<a href="novoContato.html" class="btn btn-lg btn-custom">Novo contato</a>
@@ -46,7 +48,7 @@
 								<td><%=contato.getTelefone()%></td>
 								<td><%=contato.getEmail()%></td>
 								<td>
-									<a href="Editar?id=<%=contato.getId() %>" class="btn btn-primary btn-sm ml-3">Editar</a>
+									<a href="editar?id=<%=contato.getId() %>" class="btn btn-primary btn-sm ml-3">Editar</a>
 									<a href="javascript: confirmar(<%=contato.getId() %>, '<%=contato.getNome()%>')" class="btn btn-danger btn-sm ml-3">Excluir</a>
 								</td>
 							</tr>
