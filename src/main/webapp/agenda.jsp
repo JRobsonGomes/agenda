@@ -23,13 +23,18 @@
 						<h1 class="home-titulo">Agenda de contatos</h1>
 					</a>
 				</div>
-				<div class="mt-3">
-					<a href="novoContato.html" class="btn btn-lg btn-custom">Novo contato</a>
+				<div class="row mt-5">
+					<div class="col-md-4">
+						<div class="row px-3">
+							<a href="novoContato.html" class="btn btn-custom mr-3 col">Novo contato</a>
+							<a href="relatorio" class="btn btn-primary ml-3 col" target="_blank">Relatório</a>
+						</div>
+					</div>
 				</div>
 				<%
 				if (!contatos.isEmpty() || contatos.size() <= -1) {
 				%>
-				<div class="mt-5">
+				<div class="mt-3">
 					<table class="table table-striped table-hover table-bordered table-sm">
 						<thead>
 							<tr>
